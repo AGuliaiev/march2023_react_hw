@@ -1,0 +1,10 @@
+.link{
+    color: blue;
+}
+.wrapper{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+}
