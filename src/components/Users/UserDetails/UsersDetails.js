@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UsersDetails = (data) => {
+const UsersDetails = ({data}) => {
     const {id, name, username, email, phone, website} = data;
 
     return (
