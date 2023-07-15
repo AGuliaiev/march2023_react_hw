@@ -102,7 +102,7 @@ const CarForm = ({setOnSave, carForUpdate,setCarForUpdate}) => {
                 })}/></label>
                 {errors.price && <span>{errors.price.message}</span>}
                 <label><input type="text" placeholder={'year'} {...register('year', {
-                    valueAsNumber: true,
+                    valueAsNumber: true
                     // required: true,
                     // min: {value:1990, message:'year gte 1990'},
                     // max: {value:new Date().getFullYear(), message:`year lte ${new Date().getFullYear()}`}
