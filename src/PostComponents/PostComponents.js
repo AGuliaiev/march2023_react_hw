@@ -6,9 +6,10 @@ const PostComponents = () => {
     const [posts, setPosts] = useState([]);
     return (
         <div>
-            <Posts posts={posts} setPost={setPosts()}/>
+            <FormPost setPost={setPosts}/>
             <br/>
-            <FormPost setPost={setPosts()}/>
+            <Posts posts={posts} setPosts={setPosts}/>
+
         </div>
     );
 };

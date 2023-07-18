@@ -2,11 +2,13 @@ import React, {useEffect} from 'react';
 import axios from "axios";
 import Post from "./post/Post";
 
-const Posts = ({posts, setPost}) => {
+const Posts = ({posts, setPosts}) => {
     useEffect(() => {
     axios
         .get('https://jsonplaceholder.typicode.com/posts')
-        .then(value => setPost(value))
+        .then((response) => setPosts(response.data))
+        .catch((error) => console.log(error));
+
     },[])
     return (
         <div>
