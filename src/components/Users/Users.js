@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import User from "./User/User";
 
-const Users = ({onSave}) => {
-    const [users, setUsers] = useState([]);
+const Users = ({users, setUsers}) => {
+
     useEffect(()=> {
         fetch('http://jsonplaceholder.typicode.com/users')
             .then(value => value.json())
             .then(value => setUsers(value))
-    },[onSave])
+    },[])
 
     return (
         <div>

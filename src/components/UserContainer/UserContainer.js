@@ -3,12 +3,12 @@ import Users from "../Users/Users";
 import UserForm from "../UserForm/UserForm";
 
 const UserContainer = () => {
-    const [onSave, setOnSave] = useState(null);
+    const [users, setUsers] = useState([]);
     return (
         <div>
-            <UserForm setOnSave={setOnSave()}/>
+            <UserForm setUsers={setUsers}/>
             <br/>
-            <Users onSave={onSave}/>
+            <Users users={users} setUsers={setUsers}/>
         </div>
     );
 };

@@ -1,29 +1,20 @@
-import React, {useEffect} from 'react';
+
 import {useForm} from "react-hook-form";
 
-const UserForm = ({setOnSave}) => {
+const UserForm = ({setUsers}) => {
 const {register, handleSubmit, reset} = useForm();
     const create = (user) => {
-        console.log(user);
 
-            fetch('http://jsonplaceholder.typicode.com/users', {
+            fetch('https://jsonplaceholder.typicode.com/users', {
                 headers: {'content-type':'application/json'},
-                body:JSON.stringify(user),
                 method: 'POST',
-            }).then(value => {
-                if (!value.ok) {
-                    throw Error('error')
-                }
-                return value.json()
-            })
-                .then(() => {
-                    setOnSave(prev => !prev)
-                    reset()
-                })
-                .catch(e => {
-                    console.log(e);
-                })
+                body:JSON.stringify(user),
+            }).then(value => value.json())
+                .then(value => {
+                    setUsers(prev => [...prev, value])
 
+        reset()
+    })
     }
 
 
