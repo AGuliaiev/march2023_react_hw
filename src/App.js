@@ -1,9 +1,10 @@
 import React from 'react';
 import PostComponents from "./PostComponents/PostComponents";
+import './App.css'
 
 const App = () => {
     return (
-        <div>
+        <div className={'App'}>
             <PostComponents/>
         </div>
     );
