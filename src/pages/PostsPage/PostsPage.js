@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from "../../components/Post/Post";
+import {Post} from "../../components";
 
 const PostsPage = () => {
     return (
@@ -9,4 +9,4 @@ const PostsPage = () => {
     );
 };
 
-export default PostsPage;
+export {PostsPage};

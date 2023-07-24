@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {commentsService} from "../../service";
-import Comment from "./Comment/Comment";
+import {Comment} from "./Comment/Comment";
 
 const Comments = () => {
+
     const [comments, setComments] = useState([]);
     useEffect(() => {
         commentsService.getAll().then(({data})=>setComments(data))
@@ -15,4 +16,4 @@ const Comments = () => {
     );
 };
 
-export default Comments;
+export{ Comments };

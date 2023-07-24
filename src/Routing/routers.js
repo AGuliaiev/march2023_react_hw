@@ -1,12 +1,11 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-
 import {AppRoutes} from "./AppRoutes";
+import {MainLayout} from "../layouts/MainLayout/MainLayout";
 import TodosPage from "../pages/TodosPage/TodosPage";
-import MainLayout from "../layouts/MainLayout/MainLayout";
-import AlbumsPage from "../pages/AlbomsPage/AlbumsPage";
-import CommentsPage from "../pages/CommentsPage/CommentsPage";
-import PostsPage from "../pages/PostsPage/PostsPage";
+import {AlbumsPage, CommentsPage, PostsPage} from "../pages";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+
+
 
 
 export const router = createBrowserRouter([
