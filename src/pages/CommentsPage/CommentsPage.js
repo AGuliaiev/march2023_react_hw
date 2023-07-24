@@ -1,10 +1,11 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
-
+import Comments from "../../components/Comments/Comments";
+import css from './CommentsPage.module.css'
 const CommentsPage = () => {
     return (
-        <div>
-            Comments
+        <div className={css.CommentsPage}>
+            <Comments/>
             <Outlet/>
         </div>
     );

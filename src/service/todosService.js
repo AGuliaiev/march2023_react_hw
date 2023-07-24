@@ -1,4 +1,4 @@
-import {apiService} from "./appService";
+import {apiService} from "./apiService";
 import {urls} from "../conctants";
 
 const todosService = {

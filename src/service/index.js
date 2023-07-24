@@ -1,5 +1,5 @@
 export * from './albumsService';
-export * from './appService';
+export * from './apiService';
 export * from './postsService';
 export * from './commentsService';
 export * from './todosService';
