@@ -1,23 +1,28 @@
 .moviesList{
 
-    background-color: #8892ec;
+
     display: flex;
     justify-content: space-around;
     gap: 10px;
     flex-wrap:wrap;
     margin: 0;
-
+padding-bottom: 20px;
+    background-attachment: fixed;
 }
 .cardBlock {
 
 margin-top: 20px;
-    background-color: #535bf2;
+
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .cardBlock:hover,
+
 .cardBlock:focus{
-    box-shadow: 0 10px 15px 2px rgba(100,50,92, 0.60)
+    box-shadow: 0 10px 15px 2px rgba(100,50,92, 0.60);
+    transition: 0.4s linear;
+
 }
 .link{
 
@@ -31,11 +36,27 @@ margin-top: 20px;
     font-size: 20px;
     padding-left: 5px;
 }
-/*.Img{*/
-/*    width: 100%;*/
-/*}*/
+h2{
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+margin-left: 20px;
+    display: flex;
+    flex-direction: row;
 
-
-
+}
+.Info{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+button{
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
 
 

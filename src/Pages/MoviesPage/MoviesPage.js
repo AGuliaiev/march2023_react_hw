@@ -1,17 +1,14 @@
-import React, {createContext, useState} from 'react';
+
 import MoviesList from "../../components/MoviesList/MoviesList";
-import {Outlet} from "react-router-dom";
+
 
 const MoviesPage = () => {
 
     return (
         <div>
+        <MoviesList/>
 
-                <MoviesList/>
-            <Outlet/>
-
-
-        </div>
+  </div>
     );
 };
 

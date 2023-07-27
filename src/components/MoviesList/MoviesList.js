@@ -14,10 +14,10 @@ const MoviesList = () => {
             .then(({ data }) => setListCards(data.results))
             .catch((error) => console.error(error));
     }, []);
-    console.log(listCards)
+
     return (
         <div className={css.moviesList}>
-            {listCards?.map(listCard=><MoviesListCards key={listCard.id} listCard={listCard}/>)}
+            {listCards.map(listCard=><MoviesListCards key={listCard.id} listCard={listCard}/>)}
         </div>
     );
 };

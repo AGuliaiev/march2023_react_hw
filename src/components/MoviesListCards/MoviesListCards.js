@@ -4,23 +4,20 @@ import {useNavigate} from "react-router-dom";
 
 
 const MoviesListCards = ({ listCard }) => {
-        const { backdrop_path, title, original_language, id } = listCard;
+        const { backdrop_path, title, id } = listCard;
         const navigate=useNavigate();
 
 
 
     return (
 <div className={css.cardBlock}>
-    <a className={css.link} onClick={()=>navigate(`lists/${id}`)}>
+    <a className={css.link} onClick={()=>navigate(`/lists/${id}`)}>
 
                 <div className={css.Block}>
 
                 <img className={css.Img} src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`} alt={title} />
+                   <h2 >{title}</h2>
 
-
-                    <h2>{title}</h2>
-                <p className={css.Page}>Original Language: {original_language}</p>
-                <p> ID: {id}</p>
 
                 </div>
 
