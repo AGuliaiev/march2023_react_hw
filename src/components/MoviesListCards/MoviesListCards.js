@@ -1,21 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import MoviesListCard from "./MoviesListCard/MoviesListCard";
+import React from 'react';
+import css from './MoviesListCard/Muvies.module.css'
 
-const MoviesListCards = () => {
-    const [listCards, setListCards] = useState([]);
-    useEffect(() => {
-        const apiKey = 'ddb43a60b8283b1dccd0de534703fffa';
-        axios
-            .get(`https://api.themoviedb.org/3/discover/movie?&api_key=${apiKey}`)
-            .then(({ data }) => setListCards(data.results))
-            .catch((error) => console.error(error));
-    }, []);
+const MoviesListCards = ({ listCard }) => {
+        const { backdrop_path, title, original_language, genre_ids } = listCard;
 
     return (
-        <div>
-            {listCards.map(listCard=><MoviesListCard key={listCard.id} listCard={listCard}/>)}
-        </div>
+<div class={css.cardBlock}>
+    <a className={css.link}>
+            <div className={css.ButtonContainer}>
+                <div className={css.Block}>
+
+                <img className={css.Img} src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`} alt={title} />
+
+
+                    <h2>{title}</h2>
+                <p className={css.Page}>Original Language: {original_language}</p>
+                {/*<p>Genre IDs: {genre_ids.join(', ')}</p>*/}
+
+                </div>
+            </div>
+    </a>
+</div>
+
     );
 };
 
