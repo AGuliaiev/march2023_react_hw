@@ -1,15 +1,24 @@
 import React from 'react';
 import css from './Posters.module.css'
-const Poster = ({ poster }) => {
+const Poster = ({ video }) => {
 
 
-    const { poster_path } = poster;
 
-    return (
-        <div>
-            <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={poster.title} />
-        </div>
-    );
-};
+        const { key, name, site } = video;
 
+        return (
+            <div className={css.Video}>
+                <h3>{name}</h3>
+                <p>Site: {site}</p>
+                <iframe
+                    width="560"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${key}`}
+                    title={name}
+                    frameBorder="0"
+                    allowFullScreen
+                ></iframe>
+            </div>
+        );
+    };
 export default Poster;
