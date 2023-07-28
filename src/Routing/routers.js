@@ -10,6 +10,7 @@ import GenrePage from "../Pages/GenrePage/GenrePage";
 import HomePage from "../Pages/HomePage/HomePage";
 import VideoPage from "../Pages/VideoPage/VideoPage";
 import PosterPage from "../Pages/PosterPage/PosterPage";
+import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 
 
 export const router = createBrowserRouter([
@@ -34,11 +35,13 @@ export const router = createBrowserRouter([
             {
                 path: 'lists/:id',
                 element:<MoviesListCard/>
+
             },
             {
-                path: 'video',
+                path: 'lists/:id/video',
                 element:<VideoPage/>
             },
+
             {
                 path: 'poster',
                 element: <PosterPage/>

@@ -5,6 +5,7 @@ const Poster = ({ video }) => {
 
 
         const { key, name, site } = video;
+    console.log(video)
 
         return (
             <div className={css.Video}>

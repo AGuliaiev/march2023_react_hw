@@ -69,5 +69,8 @@ button{
     justify-content: center;
     color: #535bf2;
 }
+.button{
+    font-size: 20px;
+}
 
 
