@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Muvies.module.css'
-import {Navigate, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 const MoviesDetails = ({info}) => {
     console.log(info)
     const {

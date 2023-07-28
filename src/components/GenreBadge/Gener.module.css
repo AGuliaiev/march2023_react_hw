@@ -1,0 +1,24 @@
+.link{
+    cursor: pointer
+}
+
+.wrapper:hover,
+
+.wrapper:focus{
+    background-color: #6bb0f5;
+    color: white;
+    box-shadow: 0 10px 15px 2px rgba(100,50,92, 0.60);
+    transition: 0.4s linear;
+}
+.wrapper{
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+}
+h1{
+
+    font-size: 50px;
+    color: blue;
+    text-shadow: 4px 3px 15px 0 #535bf2, 9px 8px 0 rgba(100,50,92, 0.60);
+
+}

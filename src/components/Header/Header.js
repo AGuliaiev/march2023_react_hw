@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className={css.Header}>
             <NavLink to={'lists'}>Home</NavLink>
-            <NavLink to={''}>Genre</NavLink>
+
 
         </div>
     );
