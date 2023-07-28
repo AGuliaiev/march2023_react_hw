@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './Muvies.module.css'
-import { useNavigate} from "react-router-dom";
+
 const MoviesDetails = ({info}) => {
     console.log(info)
-    const {
+       const {
         title,
         original_language,
         overview,
@@ -11,11 +11,11 @@ const MoviesDetails = ({info}) => {
         poster_path,
         genres} = info;
     const genresStr = genres.map(genre => genre.name).join(', ');
-    const navigate = useNavigate();
+
 
     return (
         <div>
-            <button onClick={()=>navigate('/lists')}>← Go back</button>
+
             <div className={css.wrapper}>
                 <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} />
                 <div className={css.Info}>

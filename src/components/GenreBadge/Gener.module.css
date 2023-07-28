@@ -18,7 +18,35 @@
 h1{
 
     font-size: 50px;
-    color: blue;
+
     text-shadow: 4px 3px 15px 0 #535bf2, 9px 8px 0 rgba(100,50,92, 0.60);
 
+}
+.listGenre{
+    display: flex;
+
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap:wrap;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+}
+.block{
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+.block:hover,
+
+.block:focus {
+    box-shadow: 0 10px 15px 2px rgba(100, 50, 92, 0.60);
+    transition: 0.4s linear;
+}
+.title{
+    color: #4444ea;
 }

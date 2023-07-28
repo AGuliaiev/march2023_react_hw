@@ -7,6 +7,7 @@ import MoviesPage from "../MoviesPage/MoviesPage";
 
 import MoviesListCard from "../components/MoviesListCards/MoviesListCard/MoviesListCard";
 import GenrePage from "../Pages/GenrePage/GenrePage";
+import HomePage from "../Pages/HomePage/HomePage";
 
 export const router = createBrowserRouter([
     {
@@ -14,12 +15,16 @@ export const router = createBrowserRouter([
         element:<MainLayout/>,
 
         children:[
-
-            {path: 'lists',
+            {
+                index: true,
                 element:<MoviesPage/>
             },
+
+            {path: 'lists',
+                element:<HomePage/>
+            },
             {
-                path: 'genres',
+                path: 'genres/:id',
                 element:<GenrePage/>
             },
             {

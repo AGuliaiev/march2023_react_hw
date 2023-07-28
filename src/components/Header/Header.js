@@ -5,11 +5,11 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className={css.Header}>
+        <h1 className={css.Header}>
             <NavLink to={'lists'}>Home</NavLink>
 
 
-        </div>
+        </h1>
     );
 };
 

@@ -1,12 +1,13 @@
 .Header{
     width: 100vw;
-    height: 50px;
+    height: 100px;
     background-color: blue;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
+    padding-left: 50px;
     align-items: center;
-    font-size: 25px;
-
+    font-size: 50px;
+margin: 0;
 }
 
 .Header a{
@@ -14,5 +15,5 @@
     color: snow;
 }
 .Header a[class='active']{
-    color: red;
+    color: rgb(64, 231, 231);
 }

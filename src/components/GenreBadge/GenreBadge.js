@@ -3,6 +3,7 @@ import axios from "axios";
 import Genre from "./Genre";
 import css from './Gener.module.css'
 
+
 const GenreBadge = () => {
     const [genres, setGenre] = useState([]);
     useEffect(()=> {
@@ -16,8 +17,8 @@ const GenreBadge = () => {
 
     return (
         <>
-            <h1>Geners</h1>
-            {genres.map(gener=><Genre key={gener.id} gener={gener}/>)}
+            <h1 className={css.title}>Genres</h1>
+            {genres.map(genre=><Genre key={genre.id} genre={genre}/>)}
         </>
     );
 };

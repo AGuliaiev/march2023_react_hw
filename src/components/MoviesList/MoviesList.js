@@ -19,6 +19,7 @@ const MoviesList = () => {
 
     return (
         <div className={css.moviesList}>
+
             {listCards.map(listCard=><MoviesListCards key={listCard.id} listCard={listCard}/>)}
         </div>
     );
