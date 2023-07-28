@@ -8,6 +8,9 @@ import MoviesPage from "../MoviesPage/MoviesPage";
 import MoviesListCard from "../components/MoviesListCards/MoviesListCard/MoviesListCard";
 import GenrePage from "../Pages/GenrePage/GenrePage";
 import HomePage from "../Pages/HomePage/HomePage";
+import VideoPage from "../Pages/VideoPage/VideoPage";
+import PosterPage from "../Pages/PosterPage/PosterPage";
+
 
 export const router = createBrowserRouter([
     {
@@ -20,9 +23,10 @@ export const router = createBrowserRouter([
                 element:<MoviesPage/>
             },
 
-            {path: 'lists',
+            {path: 'list',
                 element:<HomePage/>
             },
+
             {
                 path: 'genres/:id',
                 element:<GenrePage/>
@@ -30,6 +34,14 @@ export const router = createBrowserRouter([
             {
                 path: 'lists/:id',
                 element:<MoviesListCard/>
+            },
+            {
+                path: 'video',
+                element:<VideoPage/>
+            },
+            {
+                path: 'poster',
+                element: <PosterPage/>
             }
 
 

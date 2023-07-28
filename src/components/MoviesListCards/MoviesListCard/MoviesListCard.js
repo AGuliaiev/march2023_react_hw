@@ -16,7 +16,7 @@ const MoviesListCard = () => {
 
 
 
-    },[id])
+    },[])
 
     return (
         

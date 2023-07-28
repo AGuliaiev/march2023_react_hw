@@ -3,7 +3,9 @@ import css from './MoviesListCard/Muvies.module.css'
 import {useNavigate} from "react-router-dom";
 
 
+
 const MoviesListCards = ({ listCard }) => {
+    console.log(listCard)
         const { backdrop_path, title, id } = listCard;
         const navigate=useNavigate();
 
@@ -12,6 +14,7 @@ const MoviesListCards = ({ listCard }) => {
     return (
 <div className={css.cardBlock}>
     <a className={css.link} onClick={()=>navigate(`/lists/${id}`)}>
+
 
                 <div className={css.Block}>
 
