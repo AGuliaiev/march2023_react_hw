@@ -1,12 +1,16 @@
 import React from 'react';
 import css from '../Gener.module.css'
-import {Outlet, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 const GenreMovies = ({ movie }) => {
+    console.log(movie)
     const {poster_path, title, overview, id} = movie;
     const navigate = useNavigate();
 
     return (
         <div>
+
+
+
             <a className={css.link} onClick={()=>navigate(`/lists/${id}`)}>
             <div className={css.block}>
             <img

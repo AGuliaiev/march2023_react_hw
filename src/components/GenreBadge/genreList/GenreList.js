@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Outlet, useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
 import axios from "axios";
 import css from '../Gener.module.css'
 import GenreMovies from "./GenreMovies";
@@ -19,7 +19,7 @@ const GenreList = () => {
     return (
         <div className={css.listGenre}>
 
-            {movies.length > 0 && movies.map(movie=> <GenreMovies key={movie.id} movie={movie} />)}
+            {  movies.length > 0 && movies.map(movie=> <GenreMovies key={movie.id} movie={movie} />)}
 
         </div>
     );

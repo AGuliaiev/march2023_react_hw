@@ -2,11 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Genre from "./Genre";
 import css from './Gener.module.css'
-import GenreList from "./genreList/GenreList";
-
-
-
-
 
 
 const GenreBadge = () => {
