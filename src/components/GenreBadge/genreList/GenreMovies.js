@@ -1,6 +1,6 @@
 import React from 'react';
 import css from '../Gener.module.css'
-import {useNavigate} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
 const GenreMovies = ({ movie }) => {
     const {poster_path, title, overview, id} = movie;
     const navigate = useNavigate();
@@ -17,6 +17,7 @@ const GenreMovies = ({ movie }) => {
 
             </div>
             </a>
+
         </div>
     );
 };

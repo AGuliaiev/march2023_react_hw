@@ -9,10 +9,14 @@ const MainLayout = () => {
     return (
         <div>
             <Header/>
+
             <div className={css.main}>
-            <div className={css.Genre}><GenreBadge/></div>
-            <Outlet/>
+                <Outlet/>
+                {/*<div className={css.Genre}><GenreBadge/></div>*/}
             </div>
+
+
+
         </div>
     );
 };

@@ -11,6 +11,9 @@ import HomePage from "../Pages/HomePage/HomePage";
 import VideoPage from "../Pages/VideoPage/VideoPage";
 import PosterPage from "../Pages/PosterPage/PosterPage";
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
+import GenreList from "../components/GenreBadge/genreList/GenreList";
+import GenreBadge from "../components/GenreBadge/GenreBadge";
+import GenreWrapper from "../components/GenreBadge/GenreWrapper";
 
 
 export const router = createBrowserRouter([
@@ -37,15 +40,22 @@ export const router = createBrowserRouter([
                 element:<MoviesListCard/>
 
             },
-            {
-                path: 'lists/:id/video',
-                element:<VideoPage/>
-            },
+
 
             {
-                path: 'poster',
-                element: <PosterPage/>
-            }
+                path: 'genres',
+                element: <GenreWrapper/>,
+                children:[
+                    {
+                        path:"genres/:id",
+                        element:<GenreList />},
+
+                ]
+            },
+            {
+                path: "*",
+                element: <h1>404 Not Found</h1>,
+            },
 
 
         ]

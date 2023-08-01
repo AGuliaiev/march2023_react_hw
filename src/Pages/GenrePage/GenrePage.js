@@ -1,11 +1,13 @@
 import React from 'react';
-import GenreBadge from "../../components/GenreBadge/GenreBadge";
+
 import GenreList from "../../components/GenreBadge/genreList/GenreList";
+import {Outlet} from "react-router-dom";
 
 const GenrePage = () => {
     return (
         <>
             <GenreList/>
+
         </>
     );
 };

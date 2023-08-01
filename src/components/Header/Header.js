@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <h1 className={css.Header}>
             <NavLink to={'list'}>Home</NavLink>
-            <NavLink to={'poster'}>Posters</NavLink>
-            {/*<NavLink to={'video'}>Video</NavLink>*/}
+            <NavLink to={'genres'}>Genres</NavLink>
+
 
 
         </h1>

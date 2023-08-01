@@ -30,30 +30,30 @@
 // };
 //
 // export default PosterPreview;
-import React, { useEffect, useState } from 'react';
-import axios from "axios";
-
-import css from './Posters.module.css';
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
-
-const PosterPreview = () => {
-    const [videos, setVideos] = useState([]);
-
-    useEffect(() => {
-        const apiKey = 'ddb43a60b8283b1dccd0de534703fffa';
-        axios
-            .get(`https://api.themoviedb.org/3/tv/{series_id}/season/{season_number}/videos?api_key=${apiKey}&language=en-US`)
-            .then(({ data }) => setVideos(data))
-
-            .catch((error) => console.error(error));
-    }, []);
-    console.log(videos)
-    return (
-        <div className={css.Post}>
-            {videos.map((video) => <VideoPlayer key={video.id} video={video} />)}
-        </div>
-    );
-};
-
-export default PosterPreview;
-
+// // import React, { useEffect, useState } from 'react';
+// // import axios from "axios";
+// //
+// // import css from './Posters.module.css';
+// // import VideoPlayer from "../VideoPlayer/VideoPlayer";
+// //
+// // const PosterPreview = () => {
+// //     const [videos, setVideos] = useState([]);
+// //
+// //     useEffect(() => {
+// //         const apiKey = 'ddb43a60b8283b1dccd0de534703fffa';
+// //         axios
+// //             .get(`https://api.themoviedb.org/3/tv/{series_id}/season/{season_number}/videos?api_key=${apiKey}&language=en-US`)
+// //             .then(({ data }) => setVideos(data))
+// //
+// //             .catch((error) => console.error(error));
+// //     }, []);
+// //     console.log(videos)
+// //     return (
+// //         <div className={css.Post}>
+// //             {videos.map((video) => <VideoPlayer key={video.id} video={video} />)}
+// //         </div>
+// //     );
+// // };
+// //
+// // export default PosterPreview;
+//
