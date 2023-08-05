@@ -12,10 +12,11 @@ padding-bottom: 20px;
 .cardBlock {
 
 margin-top: 20px;
-
+flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 .cardBlock:hover,
 

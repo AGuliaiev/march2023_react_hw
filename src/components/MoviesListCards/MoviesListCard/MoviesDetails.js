@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import css from './Muvies.module.css';
 import { useNavigate } from 'react-router-dom';
+import StarsRating from "../../StarsRating/StarsRating";
 
 
 const MoviesDetails = ({ info }) => {
     const {
+        id,
         title,
         original_language,
         overview,
@@ -41,7 +43,7 @@ const MoviesDetails = ({ info }) => {
                         <p>Описание: {overview}</p>
                         <p>Популярность: {popularity}</p>
                         <p>Оригинальный язык: {original_language}</p>
-
+<StarsRating id={id}/>
 
 
                     </div>

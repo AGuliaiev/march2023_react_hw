@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './MoviesListCard/Muvies.module.css'
 import {useNavigate} from "react-router-dom";
+import StarsRating from "../StarsRating/StarsRating";
 
 
 
@@ -22,9 +23,12 @@ const MoviesListCards = ({ listCard }) => {
                    <h2 >{title}</h2>
 
 
+
+
                 </div>
 
     </a>
+    <StarsRating/>
 </div>
 
     );
