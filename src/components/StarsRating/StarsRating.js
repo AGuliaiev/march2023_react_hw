@@ -1,31 +1,39 @@
 import React, {useState} from 'react';
 import {FaStar} from 'react-icons/fa';
 import css from './Stars.module.css'
-const StarsRating = ({id}) => {
+const StarsRating = ({id, onRatingChange}) => {
 
-    const [rating, setRating] = useState(null)
+    const [ratings, setRatings] = useState({})
     const [hover, setHover] = useState(null);
-    // const handleRatingChange = (ratingValue) => {
-    //     setRating(ratingValue);
-    //     setRatings((prevRatings) => ({
-    //         ...prevRatings,
-    //         [movieId]: ratingValue,
-    //     }));
-    // };
+    const handleRatingChange = (ratingValue) => {
+        setRatings((prevRatings) => ({
+            ...prevRatings,
+            [id]: ratingValue,
+        }));
+
+
+        if (onRatingChange) {
+            onRatingChange(id, ratingValue);
+        }
+    };
+
+
+    const rating = ratings[id] || null;
+
+
     return (
         <div className={css.Stars}>
             {[...Array(5)].map((star, i) => {
                 const ratingValue = i +1;
                 return (
-                <label>
+                <label key={ratingValue}>
                     <input
                         type="radio"
-                        name="rating"
+                        name={`rating-${id}`}
                         value={ratingValue}
-                        onClick={()=>setRating(ratingValue)}
-
+                        onClick={() => handleRatingChange(ratingValue)}
                     />
-                    <FaStar
+                    < FaStar
                         className={css.Star}
                         color={ratingValue <= (hover || rating) ? "yellow" : "grey"}
                         size={30}
@@ -35,7 +43,7 @@ const StarsRating = ({id}) => {
                 </label>
                 );
             })}
-
+<p>The rating is {rating}.</p>
         </div>
     );
 };

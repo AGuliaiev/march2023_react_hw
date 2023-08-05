@@ -6,6 +6,7 @@ import StarsRating from "../../StarsRating/StarsRating";
 
 
 const MoviesDetails = ({ info }) => {
+    console.log(info)
     const {
         id,
         title,
@@ -19,6 +20,13 @@ const MoviesDetails = ({ info }) => {
     const genresStr = genres.map((genre) => genre.name).join(', ');
     const [showImageOnly, setShowImageOnly] = useState(false);
     const navigate = useNavigate();
+
+    const handleRatingChange = (movieId, ratingValue) => {
+        console.log('Movie ID:', movieId, 'Rating:', ratingValue);
+        // Here you can handle saving the rating of the movie with the given movieId
+        // For now, we are just logging the values.
+    };
+
 
     return (
         <div>
@@ -43,7 +51,7 @@ const MoviesDetails = ({ info }) => {
                         <p>Описание: {overview}</p>
                         <p>Популярность: {popularity}</p>
                         <p>Оригинальный язык: {original_language}</p>
-<StarsRating id={id}/>
+                        <StarsRating id={id} onRatingChange={handleRatingChange}/>
 
 
                     </div>
