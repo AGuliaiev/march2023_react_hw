@@ -10,7 +10,7 @@ const episodesReducer = (state = initialState, action) => {
         case episodesActionsTypes.SET:
             const episodes = action.payload.results
                 .map(episode=>(
-                    {...episode, characters: episode.characters.map(character=>character.split('/').slice(-1)[0])})
+                    {...episode, characters: episode.characters.map(character=>character.split('/').slice(-1)[0]).join(',')})
                 );
             console.log(episodes)
             return {
