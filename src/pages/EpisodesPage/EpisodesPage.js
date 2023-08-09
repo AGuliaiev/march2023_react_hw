@@ -1,9 +1,12 @@
 import React from 'react';
+import Episodes from "../../components/EpisodesContainer/Episodes/Episodes";
+import EpisodesPagination from "../../components/EpisodesContainer/EpisodesPagination/EpisodesPagination";
 
 const EpisodesPage = () => {
     return (
         <div>
-            EpisodesPage
+            <Episodes/>
+            <EpisodesPagination/>
         </div>
     );
 };
