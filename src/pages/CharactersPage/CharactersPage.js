@@ -1,9 +1,13 @@
 import React from 'react';
+import Characters from "../../components/CharacterCotainer/Characters/Characters";
+import {useNavigate} from "react-router-dom";
 
 const CharactersPage = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            CharactersPage
+            <button onClick={() => navigate(-1)}>Back</button>
+            <Characters/>
         </div>
     );
 };

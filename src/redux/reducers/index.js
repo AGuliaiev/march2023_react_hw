@@ -1,1 +1,2 @@
-export * from './episodesReducer'
+export * from './episodesReducer';
+export * from './charactersReducer'

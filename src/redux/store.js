@@ -1,8 +1,9 @@
 import {combineReducers, createStore} from "redux";
-import {episodesReducer} from "./reducers";
+import {charactersReducer, episodesReducer} from "./reducers";
 
 const rootReducer = combineReducers({
-    episodes: episodesReducer
+    episodes: episodesReducer,
+    characters: charactersReducer
 });
 const store = createStore(rootReducer);
 
