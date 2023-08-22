@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import css from './Muvies.module.css';
 import { useNavigate } from 'react-router-dom';
 import StarsRating from "../../StarsRating/StarsRating";
+import Rating from "@mui/material/Rating";
 
 
 const MoviesDetails = ({ info }) => {
@@ -51,7 +52,8 @@ const MoviesDetails = ({ info }) => {
                         <p>Описание: {overview}</p>
                         <p>Популярность: {popularity}</p>
                         <p>Оригинальный язык: {original_language}</p>
-                        <StarsRating id={id} onRatingChange={handleRatingChange}/>
+                        {/*<StarsRating id={id} onRatingChange={handleRatingChange}/>*/}
+                        <Rating/>
 
 
                     </div>
