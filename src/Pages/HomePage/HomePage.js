@@ -2,8 +2,8 @@ import React from 'react';
 import MoviesList from "../../components/MoviesList/MoviesList";
 import css from '../../components/MoviesListCards/MoviesListCard/Muvies.module.css'
 import PaginationRounded from "../../components/PaginationRounded/PaginationRounded";
-import HoverRating from "../../components/StarsRating/Rating";
-import Rating from "@mui/material/Rating";
+
+import Rating from '../../components/StarsRating/Rating'
 
 
 const HomePage = () => {
