@@ -44,7 +44,8 @@ import React, { useState } from 'react';
 import css from './MoviesListCard/Muvies.module.css';
 import { useNavigate } from 'react-router-dom';
 
-import Rating from '../StarsRating/Rating';
+import StarsRating from '../StarsRating/StarsRating';
+import Rating from "../StarsRating/Rating"; // Импортируем компонент StarsRating
 
 const MoviesListCards = ({ listCard }) => {
     const { backdrop_path, title, id } = listCard;
@@ -65,6 +66,7 @@ const MoviesListCards = ({ listCard }) => {
                 </div>
             </a>
 
+            {/* Передаем состояние рейтинга и функцию для его изменения */}
             <Rating
                 value={rating} // Передаем текущее состояние рейтинга
                 onChange={(newValue) => setRating(newValue)} // Устанавливаем новое состояние рейтинга
