@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import css from './Muvies.module.css';
 import { useNavigate } from 'react-router-dom';
-import StarsRating from "../../StarsRating/StarsRating";
-import Rating from "@mui/material/Rating";
+import Rating from "../../StarsRating/Rating"
+
 
 
 const MoviesDetails = ({ info }) => {
