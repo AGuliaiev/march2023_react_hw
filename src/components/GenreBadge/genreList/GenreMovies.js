@@ -3,7 +3,7 @@ import css from '../Gener.module.css'
 import { useNavigate} from "react-router-dom";
 const GenreMovies = ({ movie }) => {
     console.log(movie)
-    const {poster_path, title, overview, id} = movie;
+    const {poster_path, title, id} = movie;
     const navigate = useNavigate();
 
     return (
