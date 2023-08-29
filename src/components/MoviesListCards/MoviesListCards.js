@@ -3,11 +3,13 @@ import css from './MoviesListCard/Muvies.module.css'
 import {useNavigate} from "react-router-dom";
 
 import Rating from "../StarsRating/Rating";
+import {Bar, StarsR} from "../StarsRating/StarsR";
+import StarsRating from "../StarsRating/StarsRating";
 
 
 
 const MoviesListCards = ({ listCard }) => {
-    console.log(listCard)
+    // console.log(listCard)
         const { backdrop_path, title, id } = listCard;
         const navigate=useNavigate();
 
@@ -31,6 +33,8 @@ const MoviesListCards = ({ listCard }) => {
     </a>
     {/*<StarsRating/>*/}
     <Rating/>
+    {/*<StarsR/>*/}
+
 </div>
 
     );

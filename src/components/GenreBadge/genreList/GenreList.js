@@ -38,8 +38,10 @@ const GenreList = () => {
     }, [id]);
 
     return (
+        <div>
+        {genreName && <h2 style={{color:"rgb(64, 231, 231)", fontSize:"50px", margin:0, marginTop:"20px"}}>{genreName}</h2>}
         <div className={css.listGenre}>
-            {genreName && <h2>{genreName}</h2>}
+
             {movies.length > 0 &&
                 movies.map(movie => (
                     <GenreMovies
@@ -48,6 +50,7 @@ const GenreList = () => {
                         genres={genreName}
                     />
                 ))}
+        </div>
         </div>
     );
 };

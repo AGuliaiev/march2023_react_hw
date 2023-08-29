@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {FaStar} from 'react-icons/fa';
+
 import css from './Stars.module.css'
+import {FaStar} from "react-icons/fa";
 const StarsRating = ({id, onRatingChange}) => {
 
     const [ratings, setRatings] = useState({})

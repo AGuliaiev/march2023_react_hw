@@ -7,7 +7,8 @@ const GenreMovies = ({ movie }) => {
     const navigate = useNavigate();
 
     return (
-        <div>
+
+        <div style={{width:"300px"}}>
 
 
 
@@ -17,12 +18,13 @@ const GenreMovies = ({ movie }) => {
                 src={`https://image.tmdb.org/t/p/w500${poster_path}`}
                 alt={title}
             />
-            <h2>{title}</h2>
+            <h2 >{title}</h2>
 
             </div>
             </a>
 
         </div>
+
     );
 };
 

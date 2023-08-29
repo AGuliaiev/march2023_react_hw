@@ -5,10 +5,11 @@ import GenreList from "../../components/GenreBadge/genreList/GenreList";
 
 const GenrePage = () => {
     return (
-        <>
-            <GenreList/>
+        <div style={{display:"flex"}}>
+               <GenreList/>
 
-        </>
+
+        </div>
     );
 };
 
