@@ -9,6 +9,8 @@ import MoviesListCard from "../components/MoviesListCards/MoviesListCard/MoviesL
 import GenrePage from "../Pages/GenrePage/GenrePage";
 import HomePage from "../Pages/HomePage/HomePage";
 import GenreWrapper from "../components/GenreBadge/GenreWrapper";
+import MoviesList from "../components/MoviesList/MoviesList";
+import {getAllMovies} from "../service/movieService";
 
 
 export const router = createBrowserRouter([
@@ -19,7 +21,8 @@ export const router = createBrowserRouter([
         children:[
             {
                 index: true,
-                element:<MoviesPage/>
+                element:<MoviesList/>,
+                // loader:getAllMovies
             },
 
             {path: 'list',
