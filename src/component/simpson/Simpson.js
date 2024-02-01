@@ -1,7 +1,7 @@
 import React from 'react';
 import './Simpson.css';
-const Simpson = (props) => {
-    let {name, surname, age, gender, photo} = props;
+const Simpson = ({name, surname, age, gender, photo}) => {
+
     return (
         <div className={'member'}>
             <h2>{name} {surname} {age}</h2>
